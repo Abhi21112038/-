@@ -24,9 +24,9 @@ corrup2= st.number_input("CORRUPTION CASE (2016): ")
 Rul = st.number_input("Rural 2011-12 Poverty Expenditure Per Capita: ")
 Urb = st.number_input("Urban 2011-12 Poverty Expenditure Per Capita: ")
 
-ok = st.button("Predict Crime in 2014")
+#ok = st.checkbox("Predict Crime in 2014", False)
 
-if ok:
+if st.checkbox("Predict Crime in 2014", False):
     crime14 = model.predict([pop,state_le,crime,crime1,corrup1,corrup2,Rul,Urb])
     st.write("The Estimated Crime in 2014 is ",crime14)
 
