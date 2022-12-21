@@ -27,7 +27,7 @@ Urb = st.number_input("Urban 2011-12 Poverty Expenditure Per Capita: ")
 ok = st.button("Predict Crime in 2014")
 
 if ok:
-    crime14 = model.predict([pop,state_le,crime,crime1,corrup1,corrup2,Rul,Urb])
+    crime14 = model.predict([[pop,state_le,crime,crime1,corrup1,corrup2,Rul,Urb]])
     st.write("The Estimated Crime in 2014 is ",crime14)
 
 
