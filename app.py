@@ -16,8 +16,7 @@ states = ('ANDHRA PRADESH', 'ARUNACHAL PRADESH', 'ASSAM', 'BIHAR',
        'UTTAR PRADESH', 'WEST BENGAL', 'CHANDIGARH', 'LAKSHADWEEP')
 state = st.selectbox("State",states)
 state_le = label_encoder_state.transform([state])
-pop = st.number_input("Population: ")
-fiirank = st.number_input("FII rank: ") 
+pop = st.number_input("Population: ") 
 crime = st.number_input("CRIME(2015): ")
 crime1 = st.number_input("CRIME(2016): ")
 corrup1 = st.number_input("CORRUPTION CASE (2015): ")
@@ -28,7 +27,7 @@ Urb = st.number_input("Urban 2011-12 Poverty Expenditure Per Capita: ")
 ok = st.button("Predict Crime in 2014")
 
 if ok:
-    crime14 = model.predict([pop,fiirank,state_le,crime,crime1,corrup1,corrup2,Rul,Urb])
+    crime14 = model.predict([pop,state_le,crime,crime1,corrup1,corrup2,Rul,Urb])
     st.write("The Estimated Crime in 2014 is ",crime14)
 
 
