@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 import numpy as np
 
-label_encoder_state = pickle.load(open("label_encoder.pkl", "rb"))
+label_encoder_state = pickle.load(open("label_encoding.pkl", "rb"))
 
 model = pickle.load(open("model.pkl", "rb"))
 
